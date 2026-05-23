@@ -27,6 +27,7 @@ output [3:0] vgaRed, vgaBlue, vgaGreen
 
 wire pixel_clk, visible;
 wire [9:0] hcount, vcount;
+reg [11:0] rgb;
 
 clock_divider pixel_clk_signal(
 .clk(clk),
@@ -43,8 +44,34 @@ vga_timing_driver driver(
 .visible(visible)
 );
 
-assign vgaRed = (visible) ? 4'hF : 4'h0;
-assign vgaGreen = 4'h0;
-assign vgaBlue = 4'h0;
+always @(*)
+    begin
+    if(visible)
+        begin
+        if(hcount < 80)
+            rgb = 12'hF00;
+        else if(hcount < 160)
+            rgb = 12'h0F0;
+        else if(hcount < 240)
+            rgb = 12'h00F;
+        else if(hcount < 320)
+            rgb = 12'hF00;
+        else if(hcount < 400)
+            rgb = 12'h0F0;
+        else if(hcount < 480)
+            rgb = 12'h00F;
+        else if(hcount < 560)
+            rgb = 12'hF00;
+        else if(hcount < 640)
+            rgb = 12'h0F0;
+        end
+    else
+        rgb = 12'h000;
+    end
+
+// VGA outputs
+assign vgaRed = rgb[11:8];
+assign vgaGreen = rgb[7:4];
+assign vgaBlue  = rgb[3:0];
 
 endmodule

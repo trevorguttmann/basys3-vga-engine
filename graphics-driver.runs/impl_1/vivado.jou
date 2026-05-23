@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri May 22 21:12:48 2026
+# Process ID         : 26184
+# Current directory  : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/impl_1
+# Command line       : vivado.exe -log vga_test_file.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_test_file.tcl -notrace
+# Log file           : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/impl_1/vga_test_file.vdi
+# Journal file       : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/impl_1\vivado.jou
+# Running On         : TREVOREVER7
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 8945HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3992 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16421 MB
+# Swap memory        : 15569 MB
+# Total Virtual      : 31991 MB
+# Available Virtual  : 15329 MB
+#-----------------------------------------------------------
+source vga_test_file.tcl -notrace
