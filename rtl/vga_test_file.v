@@ -48,23 +48,30 @@ always @(*)
     begin
     if(visible)
         begin
-        if(hcount < 80)
-            rgb = 12'hF00;
-        else if(hcount < 160)
-            rgb = 12'h0F0;
-        else if(hcount < 240)
-            rgb = 12'h00F;
-        else if(hcount < 320)
-            rgb = 12'hF00;
-        else if(hcount < 400)
-            rgb = 12'h0F0;
-        else if(hcount < 480)
-            rgb = 12'h00F;
-        else if(hcount < 560)
-            rgb = 12'hF00;
-        else if(hcount < 640)
-            rgb = 12'h0F0;
-        end
+//        if(hcount < 80)
+//            rgb = 12'hF00;
+//        else if(hcount < 160)
+//            rgb = 12'h0F0;
+//        else if(hcount < 240)
+//            rgb = 12'h00F;
+//        else if(hcount < 320)
+//            rgb = 12'hF00;
+//        else if(hcount < 400)
+//            rgb = 12'h0F0;
+//        else if(hcount < 480)
+//            rgb = 12'h00F;
+//        else if(hcount < 560)
+//            rgb = 12'hF00;
+//        else if(hcount < 640)
+//            rgb = 12'h0F0;
+
+//        if(hcount[5] ^ vcount[5])
+//            rgb = 12'hFFF;
+//        else
+//            rgb = 12'h000;
+
+          rgb = {hcount[7:4], 4'h0, 4'h0};
+          end
     else
         rgb = 12'h000;
     end
