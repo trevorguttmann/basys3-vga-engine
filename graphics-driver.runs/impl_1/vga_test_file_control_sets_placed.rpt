@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Mon May 25 21:11:55 2026
+| Date         : Mon May 25 22:33:58 2026
 | Host         : TREVOREVER7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_test_file_control_sets_placed.rpt
 | Design       : vga_test_file
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     4 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    26 |
+| Unused register locations in slices containing registers |    25 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -43,8 +43,8 @@ Table of Contents
 | >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     0 |
@@ -58,25 +58,25 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | No                     |               2 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              10 |            3 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              11 |            4 |
+| Yes          | No                    | No                     |              10 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               9 |            2 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+---------------+--------------------------+------------------+----------------+--------------+
-|      Clock Signal      | Enable Signal |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------+---------------+--------------------------+------------------+----------------+--------------+
-|  pixel_clk_signal/Q[0] |               |                          |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG         |               |                          |                1 |              2 |         2.00 |
-|  pixel_clk_signal/Q[0] | driver/vcount | driver/vcount[9]_i_1_n_0 |                2 |              9 |         4.50 |
-|  pixel_clk_signal/Q[0] |               | driver/vcount            |                3 |             10 |         3.33 |
-+------------------------+---------------+--------------------------+------------------+----------------+--------------+
++-------------------------+-----------------+------------------------+------------------+----------------+--------------+
+|       Clock Signal      |  Enable Signal  |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+-----------------+------------------------+------------------+----------------+--------------+
+|  driver/vcount_reg[9]_0 |                 | driver/vcount_reg[9]_1 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG          |                 |                        |                1 |              2 |         2.00 |
+|  pixel_clk_signal/Q[0]  |                 | driver/vcount_0        |                3 |             10 |         3.33 |
+|  pixel_clk_signal/Q[0]  | driver/vcount_0 |                        |                5 |             10 |         2.00 |
++-------------------------+-----------------+------------------------+------------------+----------------+--------------+
 
 
