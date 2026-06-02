@@ -46,27 +46,14 @@ vga_timing_driver driver(
 
 always @(*)
     begin
+    
+    rgb = 12'h000;
+    
     if(visible)
         begin
-        
-        if(vcount > 50 && vcount < 100)
-            begin
-            if(hcount > 50 && hcount < 590)
-                rgb = 12'hFFF;
-            end
-        else if(vcount > 380 && vcount < 430)
-            begin
-            if(hcount > 50 && hcount < 590)
-                rgb = 12'hFFF;
-            end
-        else if((hcount > 50 && hcount < 100) || (hcount > 550 && hcount < 590))
+        if(hcount > 200 && hcount < 400 && vcount > 200 && vcount < 400)
             rgb = 12'hFFF;
-        else
-            rgb = 12'h000;
-        
         end
-    else
-        rgb = 12'h000;
     end
 
 // VGA outputs
