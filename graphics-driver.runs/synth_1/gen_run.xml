@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1780360349" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_test_file.dcp">
-  <File Type="PA-TCL" Name="vga_test_file.tcl"/>
-  <File Type="REPORTS-TCL" Name="vga_test_file_reports.tcl"/>
-  <File Type="RDS-RDS" Name="vga_test_file.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="vga_test_file_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="vga_test_file_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="vga_test_file_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="vga_test_file.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="vga_test_file_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="vga_test_file_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1782497858" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_test_file.dcp">
+  <File Type="PA-TCL" Name="animation_renderer.tcl"/>
+  <File Type="REPORTS-TCL" Name="animation_renderer_reports.tcl"/>
+  <File Type="RDS-RDS" Name="animation_renderer.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="animation_renderer_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="animation_renderer_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="animation_renderer_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="animation_renderer.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="animation_renderer_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="animation_renderer_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/rtl/clock_divider.v">
@@ -25,8 +25,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/rtl/animation_renderer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/rtl/vga_test_file.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,8 +42,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_test_file"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="animation_renderer"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

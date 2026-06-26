@@ -3,11 +3,11 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Mon Jun  1 20:32:31 2026
-# Process ID         : 1968
+# Start of session at: Fri Jun 26 14:17:40 2026
+# Process ID         : 28744
 # Current directory  : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/synth_1
-# Command line       : vivado.exe -log vga_test_file.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_test_file.tcl
-# Log file           : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/synth_1/vga_test_file.vds
+# Command line       : vivado.exe -log animation_renderer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source animation_renderer.tcl
+# Log file           : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/synth_1/animation_renderer.vds
 # Journal file       : C:/Users/trevo/OneDrive/Desktop/graphics-driver/graphics-driver.runs/synth_1\vivado.jou
 # Running On         : TREVOREVER7
 # Platform           : Windows Server 2016 or Windows 10
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16421 MB
-# Swap memory        : 15032 MB
-# Total Virtual      : 31454 MB
-# Available Virtual  : 14408 MB
+# Swap memory        : 15569 MB
+# Total Virtual      : 31991 MB
+# Available Virtual  : 15311 MB
 #-----------------------------------------------------------
-source vga_test_file.tcl -notrace
+source animation_renderer.tcl -notrace
