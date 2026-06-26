@@ -1,2 +1,5 @@
-# basys3-vga-engine
-FPGA VGA graphics engine
+# Basys-3 VGA Engine Project
+
+## Overview
+
+
